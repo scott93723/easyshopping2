@@ -27,7 +27,7 @@ public class Bmw_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 String s=bmw_txv_brand.getText().toString();
                 Intent intent=new Intent(Bmw_Activity.this,Cart_Activity.class);
-           //     intent.putExtra("name",s);
+              intent.putExtra("name",s);
 //                intent.putExtra("MY_KEY", 0);
                 intent.putExtra("abc",bmw_edit_count.getText().toString());
                 //intent.putExtra("123",123);

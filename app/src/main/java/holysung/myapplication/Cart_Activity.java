@@ -25,12 +25,10 @@ public class Cart_Activity extends AppCompatActivity {
         cart_txv_count = (TextView) findViewById(R.id.cart_txv_count);
         btn_cart_submit = (Button) findViewById(R.id.btn_cart_submit);
 
-//        Intent intent = getIntent();
-//        Bundle b = intent.getExtras();
 
-//        int number = getIntent().getExtras().getInt("MY_KEY");
-//        cart_txv_count.setText(number);
-//
+
+
+
 //        if (b != null) {
 //            String j = (String) b.get("name");
 //            cart_txv_brand.setText(j);
@@ -38,16 +36,21 @@ public class Cart_Activity extends AppCompatActivity {
 //        }
 ////////////////////////////////////////////////////////////////////////////////////////////
         //傳送資料 bundle
-        Bundle bundle = this.getIntent().getExtras();
+  //      Bundle bundle = this.getIntent().getExtras();
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle!=null) {
+            String brand=(String )bundle.get("name");
+            cart_txv_brand.setText(brand);
 
-        String s = bundle.getString("abc");
+            String s = bundle.getString("abc");
 //要接從第一頁接的字串
-      //  int a =bundle.getInt("123");
+            //  int a =bundle.getInt("123");
 //要接從第一頁接的數字
-        cart_txv_count.setText(s+"台");
-      //  cart_txv_count.setText(s+","+Integer.toString(a));
+            cart_txv_count.setText(s + "台");
+            //  cart_txv_count.setText(s+","+Integer.toString(a));
 
-
+        }
         btn_cart_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
