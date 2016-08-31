@@ -43,11 +43,11 @@ public class Cart_Activity extends AppCompatActivity {
             String brand=(String )bundle.get("name");
             cart_txv_brand.setText(brand);
 
-            String s = bundle.getString("abc");
+            String count = bundle.getString("count");
 //要接從第一頁接的字串
             //  int a =bundle.getInt("123");
 //要接從第一頁接的數字
-            cart_txv_count.setText(s + "台");
+            cart_txv_count.setText(count + "台");
             //  cart_txv_count.setText(s+","+Integer.toString(a));
 
         }

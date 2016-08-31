@@ -20,29 +20,23 @@ public class Bmw_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmw);
-   //     Toast.makeText(this,"BMW",Toast.LENGTH_LONG).show();
+        //     Toast.makeText(this,"BMW",Toast.LENGTH_LONG).show();
         findview();
         btn_cart.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String s=bmw_txv_brand.getText().toString();
-                Intent intent=new Intent(Bmw_Activity.this,Cart_Activity.class);
-              intent.putExtra("name",s);
-//                intent.putExtra("MY_KEY", 0);
-                intent.putExtra("abc",bmw_edit_count.getText().toString());
-                //intent.putExtra("123",123);
+                String brand = bmw_txv_brand.getText().toString();
+                Intent intent = new Intent(Bmw_Activity.this, Cart_Activity.class);
+                intent.putExtra("name", brand);
+                intent.putExtra("count", bmw_edit_count.getText().toString());
                 startActivity(intent);
-
             }
         });
-
-
         btn_chech.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Bmw_Activity.this,Shopping_Activity.class);
+                Intent intent = new Intent(Bmw_Activity.this, Shopping_Activity.class);
                 startActivity(intent);
-
             }
         });
 

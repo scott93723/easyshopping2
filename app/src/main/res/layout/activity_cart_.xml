@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="買了甚麼車:"
+            android:text="清單:"
             android:id="@+id/textView11" />
 
         <TextView
